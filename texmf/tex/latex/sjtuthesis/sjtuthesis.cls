@@ -280,7 +280,7 @@
       blue,
       black,
     },
-    initial = red,
+    initial = blue,
   },
   header-logo-color = {
     name = header@logo@color,
@@ -412,7 +412,7 @@
   abbreviation      = { initial = Abbreviation },
   nomenclature      = { initial = Nomenclature },
   summary           = { initial = Summary },
-  bib               = { initial = Bibliography },
+  bib               = { initial = References },
   index             = { initial = Index },
   acknowledgements  = { initial = Acknowledgements },
   publications      = { initial = Publications },
@@ -493,7 +493,7 @@
   本\sjtu@name@thesis@type 作者完全了解学校有关保留、使用\sjtu@name@thesis@type
   的规定，同意学校保留并向国家有关部门或机构送交论文的复印件和电子版，允许论文被
   查阅和借阅。}
-\sjtu@name@def{abstract@zh}{摘\hspace{\ccwd}要}
+\sjtu@name@def{abstract@zh}{摘要} % 摘\hspace{\ccwd}要
 \sjtu@name@def{abstract@en}{Abstract}
 \sjtu@name@def{keywords@zh}{关键词：}
 \sjtu@name@def{keywords@en}{Key words:~}

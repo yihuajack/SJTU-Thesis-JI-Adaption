@@ -34,9 +34,9 @@
 }
 \pagestyle{fancy}
 \ifsjtu@language@chinese
-  \newcommand\sjtu@thepage@format[2]{第~{#1}~页\,共~{#2}~页}
+  \newcommand\sjtu@thepage@format[2]{{#1}} % 第~{#1}~页\,共~{#2}~页
 \else
-  \newcommand\sjtu@thepage@format[2]{--~~Page~~{#1}~~of~~{#2}~~--}
+  \newcommand\sjtu@thepage@format[2]{{#1}} % --~~Page~~{#1}~~of~~{#2}~~--
 \fi
 \fancypagestyle{plain}{%
   \fancyhf{}

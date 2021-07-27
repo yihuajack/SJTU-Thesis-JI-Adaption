@@ -14,8 +14,8 @@
     %
     % 标题
     %
-    title           = {上海交通大学学位论文 \LaTeX{} 模板示例文档},
-    title*          = {A Sample Document for \LaTeX-based SJTU Thesis Template},
+    title           = {密院学位论文 \LaTeX{} 模板},
+    title*          = {A Sample Document for \LaTeX-based JI Thesis Template},
     %
     % 标题页标题
     %   可使用“\\”命令手动控制换行
@@ -30,8 +30,8 @@
     %
     % 关键词
     %
-    keywords        = {上海交大, 饮水思源, 爱国荣校},
-    keywords*       = {SJTU, master thesis, XeTeX/LaTeX template},
+    keywords        = {上海交大, 密西根学院, LaTeX模板},
+    keywords*       = {SJTU, Joint Institute, LaTeX Template},
     %
     % 姓名
     %
@@ -50,28 +50,28 @@
     %
     % 学号
     %
-    id              = {0010900990},
+    id              = {517370910000},
     %
     % 学位
     %   本科生不需要填写
     %
-    degree          = {工学硕士},
-    degree*         = {Master of Engineering},
+    degree          = {工学学士},
+    degree*         = {Bachelor of Science in Engineering},
     %
     % 专业
     %
-    major           = {某某专业},
-    major*          = {A Very Important Major},
+    major           = {电子与计算机工程/机械工程},
+    major*          = {Electrical and Computer Engineering/Mechanical Engineering},
     %
     % 所属院系
     %
-    department      = {某某系},
-    department*     = {Depart of XXX},
+    department      = {密西根学院},
+    department*     = {UM-SJTU Joint Institute},
     %
     % 课程名称
     %   仅课程论文适用
     %
-    course          = {某某课程},
+    course          = {VE 450},
     %
     % 答辩日期
     %   使用 ISO 格式 (yyyy-mm-dd)；默认为当前时间
@@ -96,7 +96,8 @@
     %
     % 本科论文页眉 logo 颜色 (red/blue/black)
     %
-    % header-logo-color = black,
+    header-logo-color = red,
+    title-logo-color = blue,
   },
   %
   % 名称设置
@@ -124,7 +125,7 @@
 \graphicspath{{figures/}}
 \DeclareGraphicsExtensions{.pdf,.eps,.png,.jpg,.jpeg}
 
-% 确定浮动对象的位置，可以使用 [H]，强制将浮动对象放到这里（可能效果很差）
+% 确定浮动对象的位置，可以使用[H]，强制将浮动对象放到这里（可能效果很差）
 % \usepackage{float}
 
 % 固定宽度的表格
@@ -183,6 +184,38 @@
 % 借用 ltxdoc 里面的几个命令方便写文档
 \DeclareRobustCommand\cs[1]{\texttt{\char`\\#1}}
 \providecommand\pkg[1]{{\sffamily#1}}
+
+% = = = = = = = = = = = = %
+%     JI专用模板调整      %
+% = = = = = = = = = = = = %
+\usepackage{mwe}
+\usepackage{blindtext}
+\usepackage{titlesec}
+\usepackage{setspace}
+
+% Chapter
+\renewcommand\chaptername{\relax}
+% \titleformat{\chapter}[hang]{\normalfont\bfseries\LARGE\centering}{\thechapter\quad}{-6pt}{}
+% \titlespacing{\chapter}{0pt}{*6}{*3}
+% \titleclass{\chapter}{straight}
+
+% Section
+\titlespacing{\section}{0pt}{*4}{*1.5}
+\titlespacing{\subsection}{0pt}{*4}{*1.5}
+\titlespacing{\subsubsection}{0pt}{*4}{*1.5}
+
+% Figure
+\renewcommand{\figurename}{Illustration}
+
+% Code
+\usepackage{minted}
+
+% JI Citation formatting
+\newcommand {\quickcite} [1] {(\parencite{#1}, \citeauthor{#1}, \citeyear{#1}: \citefield{#1}{pages})}
+
+\newcommand {\quickcitenopage} [1] {(\parencite{#1}, \citeauthor{#1}, \citeyear{#1})}
+
+\newcommand{\quickcitetwo}[2]{(\parencite{#1,#2}, \citeauthor{#1}, \citeyear{#1}: \citefield{#1}{pages}; \citeauthor{#2}, \citeyear{#2}: \citefield{#2}{pages}}
 
 % 自定义命令
 

@@ -1,0 +1,93 @@
+% !TEX root = ../main.tex
+
+% = = = = = = = = = = = = = = = = = = = %
+%             Introduction              % 
+% = = = = = = = = = = = = = = = = = = = %
+
+\let\clearpage\relax
+\chapter{Introduction}
+
+\section{Figures}
+
+\subsection{Single Figure}
+
+\begin{figure}[!htp]
+    \centering
+    \includegraphics[scale=0.5]{example-image-a}
+    \caption{Figure-A.}
+    \label{fig:a}
+\end{figure}
+
+\subsection{Subfigures}
+
+\begin{figure}[!htp]
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        % include first image
+        \includegraphics[scale=0.5]{example-image-a}
+        \caption{Subfigure-A.}
+        \label{fig:sub_a}
+    \end{minipage}\hfill
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        % include second image
+        \includegraphics[scale=0.5]{example-image-b}
+        \caption{Subfigure-B.}
+        \label{fig:sub_b}
+    \end{minipage}
+\end{figure}
+
+\section{Table}
+
+\begin{table}[!htp]
+    \begin{center}
+    \caption{Table-1.}
+    \label{tab:tab-1}
+        \begin{tabular}{cc}
+            \toprule
+                Item   &   Value \\
+            \midrule
+                A      &   1,000 \\
+                B      &   2,000 \\
+                C      &   3,000 \\
+            \bottomrule
+        \end{tabular}
+    \end{center}
+\end{table}
+
+\section{Citation}
+
+Single document with available page number~\quickcite{kopka1995guide}.
+
+Single document without available page number~\quickcitenopage{kottwitz2015latex}.
+
+Two documents at the same time~\quickcitetwo{lamport1985i1}{kopka1995guide}.
+
+\section{Source Code}
+
+\subsection{Pseudocode}
+\begin{algorithm}
+\caption{Algorithm 1.}
+\label{alg:alg-1}
+    \KwIn{integers $a,b$}
+    \KwOut{integers $c$}
+    \If {$a > b$} {
+        $c = a - b$ \;
+        \tcp{This is a comment.}
+    }
+    \Else {
+        $c = a + b$ \;
+    }
+\end{algorithm}
+
+\subsection{Source Code}
+
+\begin{minted}[mathescape,
+               linenos,
+               numbersep=5pt,
+               gobble=2,
+               frame=lines,
+               framesep=1mm]{python}
+    def my_function():
+        print("Hello from a function")
+\end{minted}
