@@ -1,4 +1,4 @@
-# Sample Template of SJTUThesis
+# Sample Template of SJTUThesis, JI VE/VM450 Adaption
 
 [![Build Status](https://github.com/sjtug/SJTUThesis/actions/workflows/build.yml/badge.svg)](https://github.com/sjtug/SJTUThesis/actions)
 [![SJTUTeX](https://img.shields.io/badge/SJTUTheis-v1.0.0rc7-green.svg)](https://github.com/sjtug/SJTUTeX) 
