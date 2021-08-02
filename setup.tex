@@ -203,6 +203,9 @@
 \titlespacing{\section}{0pt}{*4}{*1.5}
 \titlespacing{\subsection}{0pt}{*4}{*1.5}
 \titlespacing{\subsubsection}{0pt}{*4}{*1.5}
+\titleformat*{\section}{\Large\bfseries}
+\titleformat*{\subsection}{\Large\bfseries}
+\titleformat*{\subsubsection}{\Large\bfseries}
 
 % Figure
 \renewcommand{\figurename}{Illustration}
@@ -212,9 +215,7 @@
 
 % JI Citation formatting
 \newcommand {\quickcite} [1] {(\parencite{#1}, \citeauthor{#1}, \citeyear{#1}: \citefield{#1}{pages})}
-
 \newcommand {\quickcitenopage} [1] {(\parencite{#1}, \citeauthor{#1}, \citeyear{#1})}
-
 \newcommand{\quickcitetwo}[2]{(\parencite{#1,#2}, \citeauthor{#1}, \citeyear{#1}: \citefield{#1}{pages}; \citeauthor{#2}, \citeyear{#2}: \citefield{#2}{pages})}
 
 % 自定义命令
